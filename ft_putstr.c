@@ -1,18 +1,7 @@
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-  write(1, &c, 1);
-}
+int ft_strlen(char *str);
 
 void ft_putstr(char *str)
 {
-	int position;
-	
-	position = 0;
-	while(str[position] != '\0')
-	{
-		ft_putchar(str[position]);
-		position++;
-	}
+  write(1, str, ft_strlen(str));
 }
